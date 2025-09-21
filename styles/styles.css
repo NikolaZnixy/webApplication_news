@@ -1,0 +1,335 @@
+:root{
+    --bg-white:rgb(244, 244, 244);
+    --white:rgb(255, 255, 255);
+    --black:rgb(0, 0, 0);
+    --border-gray:rgb(178, 178, 178);
+    --footer-bg:rgb(78, 78, 78);
+    --footer-bg2:rgb(94, 94, 94);
+}
+
+@font-face {
+    font-family: "Anton";
+    src: url(../fonts/Anton/Oswald-VariableFont_wght.ttf) format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+  *{
+    
+    margin: 0;
+    padding: 0;
+    font-family: "Anton";
+    letter-spacing: 1.1px;
+    text-decoration: none;
+    color: var(--black);
+  }
+.margin-top-md{
+    margin-top: 25px;
+}
+.margin-auto{
+    margin: 0 auto;
+    text-align: center;
+}
+body{
+    background-color: var(--bg-white);
+}
+header{
+    width: 100%;
+    border-top: 10px solid red;
+    box-shadow: 2px 2px 2px var(--border-gray);
+}
+header figure{
+    margin: 0 auto;
+    width: 10%;
+}
+header figure img{
+    width: 100%;
+}
+nav{
+    width: 100%;
+    border-top:2px solid var(--border-gray);
+    display: flex;
+    flex-direction: row;
+}
+.nav-item{
+    padding: 10px 0;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.nav-item:not(:last-child) { 
+    border-right: 2px solid var(--border-gray);
+}
+/*END OF HEADER*/
+
+
+footer{
+background-color: var(--footer-bg);
+}
+footer section{
+    margin: 0 auto;
+    max-width: 1000px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-up{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--white);
+    flex:1 1 0;
+    justify-content: center;
+    align-items: center;
+}
+#footer-down{
+    background-color: var(--footer-bg2);
+    flex:4 1 0;
+}
+/*END OF FOOTER*/
+
+main{
+    min-height: 80vh;
+}
+
+#article-input-container{
+    margin: 20px auto;
+    max-width: 980px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 10px 10px;
+
+}
+
+#article-input-container form{
+    position: relative;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 700;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+#article-input-container form label{
+    margin-top: 20px;
+}
+#article-input-container form input[type="submit"]{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 50%;
+}
+
+#article-showcase-container{
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: var(--white);
+}
+/**/
+
+#displayImage{
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-gray);
+}
+.text-section{
+    padding: 10px;
+}
+
+/*END OF ARTICLE SHOWCASE*/
+
+/*START OF INDEX:PHP STYLING FOR DYNAMIC ARTICLES*/
+
+.category-articles-container{
+    margin: 30px auto;
+    max-width: 1000px;
+    box-shadow: 5px 5px 10px var(--border-gray);
+}
+.article-header{
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+.flex-row-articles{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.generated-article{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+}
+
+.generated-article-img-container img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.category-articles-container:nth-child(1) .article-header {
+    background-color: red;
+}
+.category-articles-container:nth-child(1) b{
+    color: red;
+}
+.category-articles-container:nth-child(2) .article-header {
+    background-color: orange;
+}
+.category-articles-container:nth-child(2) b {
+    color: orange;
+}
+
+.category-articles-container:nth-child(3) .article-header {
+    background-color: #7393B3;
+}
+.category-articles-container:nth-child(3) b {
+    color: #7393B3;
+}
+.category-articles-container:nth-child(4) .article-header {
+    background-color: green
+}
+.category-articles-container:nth-child(4) b {
+    color: green;
+}
+/*Dropdown content editing*/
+.dropdown-content{
+    display: none;
+}
+.hoverShow{
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-item:hover .dropdown-content {
+    background-color: black;
+    box-shadow: 2px 2px 2px var(--border-gray);
+    margin-top: 30px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .drop-item {
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px 5px;
+    text-align: center;
+  }
+
+  .admin-buttons{
+
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .admin-buttons a{
+    width: 50%;
+
+    flex: 1 1 0;
+  }
+  .admin-buttons button{
+    cursor: pointer;
+    width: 100%;    
+  }
+
+  #success-message{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+/*LOGIN STYLING*/
+#login-container{
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#login-form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+#login-form input[type="submit"]{
+    margin: 0 auto;
+    width: 50%;
+}
+#registration-link{
+    margin-top: 30px;
+    align-self: center;
+    width: 50%;
+}
+#registration-link button{
+    width: 100%;
+}
+
+/*Registration styling*/
+
+#register-container{
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#register-form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+
+/*Adding the user track*/
+#user-track{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: beige;
+    color: black;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#user-track button{
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+/*Input styling*/
+#edit,#delete {
+    margin-top: 20px;
+}
+
+
+
+@media screen and (max-width:700px){
+    .nav-item a,h3{
+        font-size: 11px;
+    }
+    .flex-row-articles{
+        flex-direction: column;
+    }
+    .generated-article{
+        width: 100%;
+    }
+    
+    .generated-article-img-container img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+}
